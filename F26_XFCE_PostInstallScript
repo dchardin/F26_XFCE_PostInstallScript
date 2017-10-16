@@ -17,11 +17,28 @@
 # 12. Reboot after completion of installation.
 
 # 1. Choose to use default xfce initial config
-# 2. Disconnect three of the network interfaces, except for the one set to NAT# 3. yum -y update
+# 2. Disconnect three of the network interfaces, except for the one set to NA
+# 3. dnf -y update
 # 4. restart system
-# 5. yum -y install git
+# 5. dnf -y install git
 # 6. create directory ~/GitRepos
-# 7. 
+# 7. git config --global user.name "dchardin"
+# 8. git config --global user.email "donnie@fedoraproject.org"
+# 9. 
+
+# Install guest additions
+# dnf update kernel*
+# reboot
+# Click Devices > Install Guest Additions… on VirtualBox
+# mkdir /media/VirtualBoxGuestAdditions
+# mount -r /dev/cdrom /media/VirtualBoxGuestAdditions
+# dnf install gcc kernel-devel kernel-headers dkms make bzip2 perl
+# KERN_DIR=/usr/src/kernels/`uname -r`
+# export KERN_DIR
+# cd /media/VirtualBoxGuestAdditions
+# ./VBoxLinuxAdditions.run
+# reboot
+ 
 
 
 
